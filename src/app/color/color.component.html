@@ -1,0 +1,48 @@
+<p-splitter class="splitter-container" orientation="horizontal">
+  <ng-template pTemplate="first">
+    <div class="panel panel-left">
+      <p-card class="color-list" header="Colors">
+        <ul style="list-style-type: none">
+          <li *ngFor="let color of colors" class="color-item">
+            <span class="color-name">{{ color.name }}</span>
+            <button
+              pButton
+              pRipple
+              label="Preview"
+              (click)="previewColor(color)"
+            ></button>
+          </li>
+        </ul>
+      </p-card>
+    </div>
+  </ng-template>
+
+  <ng-template pTemplate="second">
+    <div
+      class="panel panel-right"
+      [style.background-color]="'#' + selectedColor"
+      [style.color]="determineFontColor('#' + selectedColor) || 'black'"
+    >
+      <p-card class="preview-color" header="Preview">
+        <ul>
+          Name:
+          {{
+            selectedColorName
+          }}
+        </ul>
+        <ul>
+          Hex:
+          {{
+            selectedColor
+          }}
+        </ul>
+        <ul>
+          Color Code:
+          {{
+            selectedColorCode
+          }}
+        </ul>
+      </p-card>
+    </div>
+  </ng-template>
+</p-splitter>

@@ -1,0 +1,62 @@
+@import "primeng/resources/primeng.min.css";
+@import "primeng/resources/themes/lara-light-purple/theme.css";
+
+.splitter-container {
+  height: 300px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+.panel {
+  width: 600px;
+  height: 99%;
+  padding: 1px;
+  //border: 1px solid #818181;
+}
+
+.panel-left {
+  overflow-y: scroll;
+  width: 50%;
+  position: fixed;
+}
+
+.panel-right {
+  margin-top: 7.5%;
+  margin-left: 10%;
+  width: 65%;
+  height: 165%;
+  border: 1px solid #818181;
+  background-color: #000000;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.color-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.color-name {
+  flex: 1;
+  margin-right: 10px;
+}
+.color-list {
+  font-size: xx-large;
+  ul {
+    font-size: large;
+    list-style-type: none;
+    padding: 0;
+    border: 1px solid #ddd;
+  }
+
+  ul li {
+    padding: 8px 16px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  ul li:last-child {
+    border-bottom: none;
+  }
+}
