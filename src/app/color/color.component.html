@@ -2,7 +2,7 @@
   <ng-template pTemplate="first">
     <div class="panel panel-left">
       <p-card class="color-list" header="Colors">
-        <ul style="list-style-type: none">
+        <ul>
           <li *ngFor="let color of colors" class="color-item">
             <span class="color-name">{{ color.name }}</span>
             <button
@@ -23,26 +23,11 @@
       [style.background-color]="'#' + selectedColor"
       [style.color]="determineFontColor('#' + selectedColor) || 'black'"
     >
-      <p-card class="preview-color">
-        <ul>
-          Name:
-          {{
-            selectedColorName
-          }}
-        </ul>
-        <ul>
-          Hex:
-          {{
-            selectedColor
-          }}
-        </ul>
-        <ul>
-          Color Code:
-          {{
-            selectedColorCode
-          }}
-        </ul>
-      </p-card>
+      <ul>
+        <li>Name: {{ selectedColorName }}</li>
+        <li>Hex: {{ selectedColor }}</li>
+        <li>Color Code: {{ selectedColorCode }}</li>
+      </ul>
     </div>
   </ng-template>
 </p-splitter>

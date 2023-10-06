@@ -6,11 +6,11 @@ import { Observable } from 'rxjs';
   providedIn: 'root',
 })
 export class ColorService {
-  private apiUrl = 'https://api.prolook.com/api/colors/prolook'; // API URL
-
+  private apiUrl = 'https://api.prolook.com/api/colors/prolook';
   constructor(private http: HttpClient) {}
 
   getColors(): Observable<any> {
+    //Get the API Data
     return this.http.get(this.apiUrl);
   }
 }

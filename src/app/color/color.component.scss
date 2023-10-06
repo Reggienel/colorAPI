@@ -6,11 +6,15 @@
   font-family: Arial, sans-serif;
   font-size: 16px;
 }
+
+:host ::ng-deep .p-splitter {
+  border: none !important;
+}
+
 .panel {
   width: 600px;
   height: 99%;
   padding: 1px;
-  //border: 1px solid #818181;
 }
 
 .panel-left {
@@ -42,21 +46,28 @@
   flex: 1;
   margin-right: 10px;
 }
+
 .color-list {
   font-size: xx-large;
   ul {
-    font-size: large;
     list-style-type: none;
     padding: 0;
     border: 1px solid #ddd;
   }
 
   ul li {
-    padding: 8px 16px;
     border-bottom: 1px solid #ddd;
   }
 
   ul li:last-child {
     border-bottom: none;
   }
+}
+
+ul {
+  list-style-type: none;
+  font-size: large;
+}
+ul li {
+  padding: 8px 16px;
 }
