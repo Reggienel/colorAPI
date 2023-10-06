@@ -14,6 +14,7 @@ This project was generated with [Angular CLI](https://github.com/angular/angular
 - TypeScript
 - PrimeNG (for UI components)
 - CSS
+- Code Style Prettier
   
 ### Prerequisites
 
